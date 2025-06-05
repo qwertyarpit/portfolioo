@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arpit's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Arpit Agarwal</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p class="parag">I’m a software developer passionate about building impactful web applications. I’ve worked on AI content platforms, collaborative tools, and enjoy solving real-world problems with code.</p>
+  </section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card-container">
+    <div class="card fade-in">
+      <h3><a href="https://skynet-two.vercel.app/" target="_blank">Skynet</a></h3>
+      <p class="card-desc">AI content generation platform for creators. Generates blog, tweet, and video content using LLMs.</p>
+    </div>
+    <div class="card fade-in">
+      <h3><a href="https://livedocs-wyyp.vercel.app/sign-in" target="_blank">LiveDocs</a></h3>
+      <p class="card-desc">Real-time collaborative document editor with WebSocket integration and conflict resolution.</p>
+    </div>
+    <div class="card fade-in">
+      <h3><a href="https://yelpcamp-5d8t.onrender.com/" target="_blank">Yelp Camp</a></h3>
+      <p class="card-desc">A geolocation abse layout to find and rate the best campgrounds around the world.</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card-container">
+      <div class="card fade-in">
+        <h3>Upnyx Innovative Solutions</h3>
+        <p class="card-desc">Developed and integrated a blog chat and output screen, enhancing user interaction and content delivery by over 25%.
+
+Implemented image integration via WebSocket for dynamic blog creation and real-time updates.
+
+Designed and built a rich text editor with in-browser editing capabilities for seamless content management.
+
+Enabled blog output sharing across platforms and managed exceptions with 500/404 error notifications.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Tensor Solution Tech</h3>
+        <p class="card-desc">Developed the complete frontend of the assigned project using React.js ensuring a responsive and user-friendly interface.
+
+Developed and implemented authentication and authorization systems from scratch.
+
+Created password management features including forgot password, reset password, and OTP verification.
+
+Integrated the frontend and backend and implemented social login functionality with Google, GitHub, and Facebook.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Arpit Agarwal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thanks for reaching out! I'll get back to you soon.");
+      this.reset();
+    });
+
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+    faders.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

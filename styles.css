@@ -1,0 +1,180 @@
+/* Font & Reset */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+   background: linear-gradient(to right, #4b6cb7, #182848);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Section */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Base style for h2 headings */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fffcfc;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for h2 */
+h2:hover {
+  color: #4b6cb7; /* blue highlight */
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+
+/* Card Styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgb(236, 236, 236);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.8rem;
+  width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.card-desc {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 1rem;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+/* .card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+} */
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  background-color: #467ccd; /* light blue hover */
+}
+
+.card:hover .card-desc {
+  opacity: 1;
+  max-height: 200px;
+}
+
+/* Animations on Scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact Form */
+form input,
+form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+form button {
+  padding: 1rem 2rem;
+  background: #4b6cb7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #3551a0;
+}
+
+/* Footer */
+footer {
+  background: #182848;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+/* Center all headings */
+h1, h2, h3 {
+  text-align: center;
+}
+
+.parag {
+    text-align: center;
+    color: white;
+    size: 3 rem;
+}
+
+
+h3 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+h3 a:hover {
+  color: #4b6cb7;
+  text-decoration: underline;
+}
